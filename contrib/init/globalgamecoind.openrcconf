@@ -1,0 +1,26 @@
+# /etc/conf.d/globalgamecoind: config file for /etc/init.d/globalgamecoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/globalgamecoin/globalgamecoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/globalgamecoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/globalgamecoind.pid"
+
+# Where to write globalgamecoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/globalgamecoind"
+
+# User and group to own globalgamecoind process
+#BITCOIND_USER="globalgamecoin"
+#BITCOIND_GROUP="globalgamecoin"
+
+# Path to globalgamecoind executable
+#BITCOIND_BIN="/usr/bin/globalgamecoind"
+
+# Nice value to run globalgamecoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

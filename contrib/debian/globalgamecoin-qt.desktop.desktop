@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=GlobalgameCoin
+Comment=GlobalgameCoin P2P Cryptocurrency
+Exec=globalgamecoin-qt %u
+Terminal=false
+Type=Application
+Icon=globalgamecoin128
+MimeType=x-scheme-handler/globalgamecoin;
+Categories=Office;Finance;
+Name[en_US]=globalgamecoin-qt.desktop

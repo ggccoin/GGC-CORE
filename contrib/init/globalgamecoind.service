@@ -1,0 +1,26 @@
+[Unit]
+Description=Globalgame Coin's distributed currency daemon
+After=network.target
+
+[Service]
+User=globalgamecoin
+Group=globalgamecoin
+
+Type=forking
+PIDFile=/var/lib/globalgamecoind/globalgamecoind.pid
+
+ExecStart=/usr/bin/globalgamecoind -daemon -pid=/var/lib/globalgamecoind/globalgamecoind.pid \
+          -conf=/etc/globalgamecoin/globalgamecoin.conf -datadir=/var/lib/globalgamecoind
+
+ExecStop=-/usr/bin/globalgamecoin-cli -conf=/etc/globalgamecoin/globalgamecoin.conf \
+         -datadir=/var/lib/globalgamecoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
